@@ -20,7 +20,7 @@ export VISUAL=$EDITOR
 #** Bindings
 #*******************
 # Prefix sudo to the command
-bind '"\C-xs":"\C-asudo \C-e"'
+[[ $- = *i* ]] && bind '"\C-xs":"\C-asudo \C-e"'
 
 #*******************
 #** History
