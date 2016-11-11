@@ -1,8 +1,12 @@
 
 post_install() {
-    apply "\$include $PEARL_PKGDIR/inputrc" $HOME/.inputrc
+    link inputrc "$PEARL_PKGDIR/inputrc"
+}
+
+post_update() {
+    post_install
 }
 
 pre_remove() {
-    unapply "\$include $PEARL_PKGDIR/inputrc" $HOME/.inputrc
+    unlink inputrc "$PEARL_PKGDIR/inputrc"
 }
