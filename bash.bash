@@ -29,5 +29,6 @@ HISTFILESIZE=100000
 HISTSIZE=100000
 HISTIGNORE="&:l[las]:[bf]g:l:a:j:f:b:e"
 HISTCONTROL=erasedups:ignorespace
+HISTTIMEFORMAT="%d/%m/%y %T "
 [ -z $HISTFILE ] && HISTFILE=$HOME/.bash_history
 shopt -s histappend &> /dev/null
