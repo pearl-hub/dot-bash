@@ -16,6 +16,11 @@ export EDITOR=vim
 # some programs use this instead of EDITOR
 export VISUAL=$EDITOR
 
+if [[ $PATH != *"${HOME}/.local/bin"* ]]
+then
+    export PATH="${HOME}/.local/bin:$PATH"
+fi
+
 #*******************
 #** Bindings
 #*******************
