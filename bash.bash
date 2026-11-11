@@ -12,14 +12,14 @@ shopt -s checkwinsize &> /dev/null
 #*******************
 #** Generic variables
 #*******************
-export EDITOR=vim
+command -v nano &> /dev/null && export EDITOR=nano
+command -v vim &> /dev/null && export EDITOR=vim
+command -v nvim &> /dev/null && export EDITOR=nvim
 # some programs use this instead of EDITOR
 export VISUAL=$EDITOR
+export SUDO_EDITOR="$EDITOR"
 
-if [[ $PATH != *"${HOME}/.local/bin"* ]]
-then
-    export PATH="${HOME}/.local/bin:$PATH"
-fi
+add_to_path $HOME/.local/bin
 
 #*******************
 #** Bindings
